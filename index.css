@@ -119,8 +119,8 @@ hr {
   color: white;
   position: absolute;
   right: 0px;
-  top: -40px;
-  font-size: 15px;
+  top: -50px;
+  font-size: 1.9vw;
   transition: 1s ease-in;
 }
 .display-container {
@@ -133,8 +133,8 @@ hr {
   position: absolute;
   right: 0px;
   top: -25px;
-  font-size: 63px;
-  transition: 1s ease-out;
+  font-size: 4.5vw;
+  transition: 1s
 }
 .input-buttons {
   margin-top: 20px;
@@ -152,6 +152,7 @@ hr {
   margin-top: 0.2%;
 }
 .input-button {
+  z-index: 3;
   object-fit: contain;
   flex: 1;
   margin-left: 0.2%;
@@ -217,31 +218,36 @@ hr {
 .delete-history-container {
   z-index: 2;
   position: absolute;
-  right: 0px;
-  bottom: 0px;
+  right: 5px;
+  bottom: 3px;
   width: 100%;
   display: flex;
 }
+
 .delete-history, .delete-history-img {
   transition: 0.12s ease-out;
-
 }
+
 .delete-history {
   margin-left: 90%;
   margin-bottom: 2%;
   position: relative;
 }
+
 .delete-history:hover {
   border-radius: 5px;
-  transform: translate(0rem, -0.5rem);
+  transform: translate(0rem, -0.3rem);
 }
+
 .delete-history:active {
-  transform: translate(-0.3rem, -0.8rem);
+  transform: translate(-0.3rem, -0.5rem);
 }
+
 .delete-history-img {
   width: 25px;
   height: 25px;
 }
+
 .delete-history-img:active {
   width: 30px;
   height: 30px;
