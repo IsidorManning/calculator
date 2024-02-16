@@ -363,16 +363,24 @@ class Calculator extends CalculatorUtils {
 
   plusOrMinus() {
     const display = this.getDisplay();
-    if (!this.isEmpty(display)) {
+    if (this.isEmpty(display)) return;
+    
+    if (this.frontendOverview === '') {
+      this.display.innerHTML = this.operations.negate(display);
+    }
+
+    else {
       this.display.innerHTML = this.operations.negate(display);
 
       if (!(this.backendOverview === "")) {
         const split = this.splitInTerms(this.backendOverview + display)
         this.backendOverview = split.slice(0, -1).join("") + this.operations.negate(split[split.length - 1 ])
-
-      } if (this.inSingleOperation) {
+      } 
+  
+      if (this.inSingleOperation) {
         const split = this.splitInTerms(this.frontendOverview);
         this.frontendOverview =  split.slice(0, -1).join("") + "negate(" + split[split.length - 1 ] + ")";
+  
         this.overview.innerHTML = this.formating.addSpace(this.frontendOverview);
       }
     }
