@@ -54,3 +54,9 @@ Formating Class: Provides methods for formatting numerical values and expression
 Preprocessing Class: Handles preprocessing of input expressions to ensure proper calculation.
 
 History Class: Manages the display and functionality of the calculation history section.
+
+# For the future me:
+
+- better code readability
+- Full code documentation (currently, there is none)
+- more effecient and reusable code
